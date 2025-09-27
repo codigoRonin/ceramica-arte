@@ -30,7 +30,7 @@ const PRODUCTS = [
         name: 'Cuadro Abstracto "Ecos"',
         price: 295,
         category: 'arte',
-        image: 'assets/images/products/cuadro1.jpg',
+        image: 'assets/images/products/cuadro1.JPG',
         description: 'Acrílico sobre lienzo, 80x100cm',
         featured: true,
         inStock: true
