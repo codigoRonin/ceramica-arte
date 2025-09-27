@@ -1,0 +1,20 @@
+{
+  "name": "atelier-ceramico",
+  "version": "1.0.0",
+  "description": "Sitio web de Atelier Cerámico - Piezas únicas de cerámica y arte contemporáneo",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 3000",
+    "dev": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "ceramica",
+    "arte",
+    "piezas de autor",
+    "cursos",
+    "experiencias",
+    "galeria"
+  ],
+  "author": "Atelier Cerámico",
+  "license": "MIT"
+}

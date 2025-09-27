@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Piezas únicas de cerámica y arte contemporáneo">
+    <meta name="keywords" content="cerámica, arte, piezas de autor, cursos, experiencias, galería">
+    <title>Cana Cerámica & Arte</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+                'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+                sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .btn-primary {
+            background-color: #8B4513;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #654321;
+        }
+
+        .btn-secondary {
+            border: 2px solid #8B4513;
+            color: #8B4513;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #8B4513;
+            color: white;
+        }
+
+        .text-primary {
+            color: #8B4513;
+        }
+
+        .bg-primary {
+            background-color: #8B4513;
+        }
+
+        .border-primary {
+            border-color: #8B4513;
+        }
+
+        /* Animaciones */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        /* Icons usando símbolos Unicode */
+        .icon-menu::before { content: "☰"; }
+        .icon-close::before { content: "✕"; }
+        .icon-cart::before { content: "🛒"; }
+        .icon-heart::before { content: "♡"; }
+        .icon-star::before { content: "★"; }
+        .icon-clock::before { content: "🕐"; }
+        .icon-calendar::before { content: "📅"; }
+        .icon-plane::before { content: "✈"; }
+        .icon-instagram::before { content: "📷"; }
+        .icon-facebook::before { content: "👤"; }
+        .icon-twitter::before { content: "🐦"; }
+        .icon-mail::before { content: "✉"; }
+        .icon-phone::before { content: "📞"; }
+        .icon-map::before { content: "📍"; }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <!-- Contenido estático mientras carga -->
+        <div class="min-h-screen bg-gray-50">
+            <!-- Header -->
+            <header class="fixed top-0 w-full bg-white shadow-sm z-50">
+                <div class="container mx-auto px-4 py-4">
+                    <div class="flex justify-between items-center">
+                        <div class="text-2xl font-bold text-primary cursor-pointer">
+                            Cana Cerámica & Arte
+                        </div>
+                        
+                        <!-- Desktop Navigation -->
+                        <nav class="hidden md:flex items-center gap-8">
+                            <a href="#productos" class="text-gray-700 hover:text-gray-900 transition-colors">Productos</a>
+                            <a href="#cursos" class="text-gray-700 hover:text-gray-900 transition-colors">Cursos</a>
+                            <a href="#experiencias" class="text-gray-700 hover:text-gray-900 transition-colors">Experiencias</a>
+                            <a href="#sobre-nosotras" class="text-gray-700 hover:text-gray-900 transition-colors">Sobre Nosotras</a>
+                            <a href="#galeria" class="text-gray-700 hover:text-gray-900 transition-colors">Galería</a>
+                        </nav>
+
+                        <div class="flex items-center gap-4">
+                            <button class="relative p-2 text-gray-700 hover:text-gray-900 transition-colors">
+                                <span class="icon-cart text-xl"></span>
+                            </button>
+                            <button class="md:hidden mobile-menu-toggle">
+                                <span class="icon-menu text-xl"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div class="mobile-menu md:hidden bg-white border-t">
+                    <div class="container mx-auto px-4 py-4 flex flex-col gap-4">
+                        <a href="#productos" class="py-2 text-gray-700 hover:text-gray-900">Productos</a>
+                        <a href="#cursos" class="py-2 text-gray-700 hover:text-gray-900">Cursos</a>
+                        <a href="#experiencias" class="py-2 text-gray-700 hover:text-gray-900">Experiencias</a>
+                        <a href="#sobre-nosotras" class="py-2 text-gray-700 hover:text-gray-900">Sobre Nosotras</a>
+                        <a href="#galeria" class="py-2 text-gray-700 hover:text-gray-900">Galería</a>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Hero Section -->
+            <section id="home" class="pt-20 min-h-screen flex items-center hero-gradient">
+                <div class="container mx-auto px-4 py-20">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div class="animate-fade-in-up">
+                            <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                                Arte que <span class="text-primary">transforma</span>
+                            </h1>
+                            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                                Descubre piezas únicas de cerámica y arte contemporáneo, 
+                                cursos inmersivos y experiencias transformadoras 
+                                creadas con pasión y dedicación.
+                            </p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="#productos" class="btn-primary text-white px-8 py-4 rounded-lg text-lg font-semibold text-center">
+                                    Explorar Colección
+                                </a>
+                                <a href="#cursos" class="btn-secondary px-8 py-4 rounded-lg text-lg font-semibold text-center">
+                                    Cursos & Talleres
+                                </a>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img 
+                                src="https://placehold.co/600x700/8B4513/FFFFFF?text=Atelier+Cerámico" 
+                                alt="Atelier Cerámico" 
+                                class="rounded-2xl shadow-2xl w-full"
+                            />
+                            <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lg">
+                                <div class="flex items-center gap-2 text-yellow-400">
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                    <span class="icon-star"></span>
+                                </div>
+                                <p class="mt-2 text-gray-600">"Experiencia excepcional"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section id="productos" class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Piezas de Autor</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Cada pieza es única, creada con técnicas ancestrales y una visión contemporánea
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <div class="relative">
+                                <img src="https://placehold.co/600x600/8B4513/FFFFFF?text=Vaso+Escultórico" alt="Vaso Escultórico" class="w-full h-64 object-cover" />
+                                <button class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
+                                    <span class="icon-heart"></span>
+                                </button>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Vaso Escultórico Terracota</h3>
+                                <p class="text-gray-600 mb-4">Pieza única hecha a mano con arcilla terracota</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$85</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Añadir al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <div class="relative">
+                                <img src="https://placehold.co/600x600/2F4F4F/FFFFFF?text=Cuadro+Abstracto" alt="Cuadro Abstracto" class="w-full h-64 object-cover" />
+                                <button class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
+                                    <span class="icon-heart"></span>
+                                </button>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Cuadro Abstracto "Ecos"</h3>
+                                <p class="text-gray-600 mb-4">Acrílico sobre lienzo, 80x100cm</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$320</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Añadir al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <div class="relative">
+                                <img src="https://placehold.co/600x600/8B4513/FFFFFF?text=Escultura+Raíces" alt="Escultura Raíces" class="w-full h-64 object-cover" />
+                                <button class="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md hover:bg-gray-100 transition-colors">
+                                    <span class="icon-heart"></span>
+                                </button>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold mb-2">Escultura "Raíces"</h3>
+                                <p class="text-gray-600 mb-4">Cerámica gres con óxidos naturales</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$280</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Añadir al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <button class="btn-secondary px-8 py-3 rounded-lg font-semibold">
+                            Ver toda la colección
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses -->
+            <section id="cursos" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Cursos & Talleres</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Aprende cerámica y expresión artística con nuestras expertas
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Curso+Cerámica" alt="Introducción a la Cerámica" class="w-full h-48 object-cover" />
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Principiante
+                                    </span>
+                                    <span class="flex items-center gap-1 text-gray-600">
+                                        <span class="icon-clock"></span>
+                                        8 semanas
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Introducción a la Cerámica</h3>
+                                <p class="text-gray-600 mb-4">Aprende las bases del torno y modelado manual</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$280</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Reservar plaza
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística" alt="Expresión Artística" class="w-full h-48 object-cover" />
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
+                                        Intermedio
+                                    </span>
+                                    <span class="flex items-center gap-1 text-gray-600">
+                                        <span class="icon-clock"></span>
+                                        6 semanas
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Expresión Artística con Arcilla</h3>
+                                <p class="text-gray-600 mb-4">Explora tu creatividad a través de la cerámica</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$240</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Reservar plaza
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <button class="btn-secondary px-8 py-3 rounded-lg font-semibold">
+                            Ver todos los cursos
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experiences -->
+            <section id="experiencias" class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Experiencias Únicas</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Viajes y retiros creativos que transformarán tu relación con el arte
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Toscana+Retiro" alt="Retiro en Toscana" class="w-full h-48 object-cover" />
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="flex items-center gap-1 text-gray-600">
+                                        <span class="icon-calendar"></span>
+                                        7 días
+                                    </span>
+                                    <span class="flex items-center gap-1 text-gray-600">
+                                        <span class="icon-plane"></span>
+                                        Viaje
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Retiro Creativo en Toscana</h3>
+                                <p class="text-gray-600 mb-4">Inmersión total en cerámica y arte en Italia</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$1200</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Más información
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                            <img src="https://placehold.co/600x400/D2B48C/000000?text=Cerámica+Japonesa" alt="Cerámica Japonesa" class="w-full h-48 object-cover" />
+                            <div class="p-6">
+                                <div class="flex items-center gap-4 mb-3">
+                                    <span class="flex items-center gap-1 text-gray-600">
+                                        <span class="icon-calendar"></span>
+                                        5 días
+                                    </span>
+                                    <span class="flex items-center gap-1 text-gray-600">
+                                        <span class="icon-plane"></span>
+                                        Viaje
+                                    </span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-2">Taller de Cerámica Japonesa</h3>
+                                <p class="text-gray-600 mb-4">Aprende técnicas tradicionales japonesas</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-2xl font-bold text-primary">$850</span>
+                                    <button class="btn-primary text-white px-6 py-2 rounded-lg">
+                                        Más información
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-12">
+                        <button class="btn-secondary px-8 py-3 rounded-lg font-semibold">
+                            Descubrir experiencias
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Us -->
+            <section id="sobre-nosotras" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Sobre Nosotras</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Dos artistas apasionadas por compartir su conocimiento y creatividad
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="text-center">
+                            <div class="relative inline-block mb-6">
+                                <img 
+                                    src="https://placehold.co/400x500/8B4513/FFFFFF?text=María+del+Carmen+Pérez" 
+                                    alt="María del Carmen Pérez" 
+                                    class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg"
+                                />
+                                <div class="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md">
+                                    <span class="icon-instagram text-gray-600"></span>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">María del Carmen Pérez</h3>
+                            <p class="text-gray-600 mb-4">Ceramista & Artista</p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Con más de 15 años de experiencia en cerámica artística, María combina técnicas tradicionales con enfoques contemporáneos para crear piezas únicas que exploran la relación entre forma y función.
+                            </p>
+                            <div class="flex justify-center gap-4 mt-4">
+                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+                                    <span class="icon-instagram text-xl"></span>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+                                    <span class="icon-facebook text-xl"></span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="relative inline-block mb-6">
+                                <img 
+                                    src="https://placehold.co/400x500/D2B48C/000000?text=Cora+González" 
+                                    alt="Cora González" 
+                                    class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg"
+                                />
+                                <div class="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md">
+                                    <span class="icon-instagram text-gray-600"></span>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Cora González</h3>
+                            <p class="text-gray-600 mb-4">Artista Visual & Educadora</p>
+                            <p class="text-gray-700 leading-relaxed">
+                                Cora es una artista multidisciplinaria especializada en pintura contemporánea y expresión artística. Su trabajo explora temas de identidad, memoria y conexión humana a través de colores vibrantes y texturas expresivas.
+                            </p>
+                            <div class="flex justify-center gap-4 mt-4">
+                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+                                    <span class="icon-instagram text-xl"></span>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+                                    <span class="icon-facebook text-xl"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery -->
+            <section id="galeria" class="py-20 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Galería</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Un vistazo a nuestras creaciones más recientes
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/8B4513/FFFFFF?text=Obra+1" 
+                                alt="Obra 1" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/D2B48C/FFFFFF?text=Obra+2" 
+                                alt="Obra 2" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/8B4513/FFFFFF?text=Obra+3" 
+                                alt="Obra 3" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/D2B48C/FFFFFF?text=Obra+4" 
+                                alt="Obra 4" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/8B4513/FFFFFF?text=Obra+5" 
+                                alt="Obra 5" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/D2B48C/FFFFFF?text=Obra+6" 
+                                alt="Obra 6" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/8B4513/FFFFFF?text=Obra+7" 
+                                alt="Obra 7" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <img 
+                                src="https://placehold.co/400x400/D2B48C/FFFFFF?text=Obra+8" 
+                                alt="Obra 8" 
+                                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact & Footer -->
+            <footer class="bg-gray-900 text-white py-16">
+                <div class="container mx-auto px-4">
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4 text-primary">
+                                Cana Cerámica & Arte
+                            </h3>
+                            <p class="text-gray-300 mb-4">
+                                Piezas únicas de cerámica y arte contemporáneo
+                            </p>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                    <span class="icon-instagram text-xl"></span>
+                                </a>
+                                <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                    <span class="icon-facebook text-xl"></span>
+                                </a>
+                                <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                                    <span class="icon-twitter text-xl"></span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Productos</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li><a href="#" class="hover:text-white transition-colors">Cerámica de Autor</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Arte Contemporáneo</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Piezas Únicas</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Colecciones</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Experiencias</h4>
+                            <ul class="space-y-2 text-gray-300">
+                                <li><a href="#" class="hover:text-white transition-colors">Cursos</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Talleres</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Retiros Creativos</a></li>
+                                <li><a href="#" class="hover:text-white transition-colors">Viajes Artísticos</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4">Contacto</h4>
+                            <div class="space-y-3 text-gray-300">
+                                <div class="flex items-center gap-3">
+                                    <span class="icon-mail"></span>
+                                    <span>info@atelierceramico.com</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="icon-phone"></span>
+                                    <span>+34 600 000 000</span>
+                                </div>
+                                <div class="flex items-center gap-3">
+                                    <span class="icon-map"></span>
+                                    <span>Madrid, España</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                        <p>&copy; 2024 Cana Cerámica & Arte. Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript básico para el menú móvil
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    const icon = mobileMenuToggle.querySelector('span');
+                    if (mobileMenu.classList.contains('active')) {
+                        icon.className = 'icon-close text-xl';
+                    } else {
+                        icon.className = 'icon-menu text-xl';
+                    }
+                });
+            }
+
+            // Cerrar menú móvil al hacer clic en un enlace
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                    const icon = mobileMenuToggle.querySelector('span');
+                    icon.className = 'icon-menu text-xl';
+                });
+            });
+
+            // Scroll suave para todos los enlaces
+            const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+            smoothScrollLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
