@@ -17,11 +17,11 @@ const SITE_CONFIG = {
 const PRODUCTS = [
     {
         id: 1,
-        name: 'Vaso Escultórico Terracota',
+        name: 'Botijo "Toro"',
         price: 72,
         category: 'ceramica',
-        image: 'https://placehold.co/600x600/8B4513/FFFFFF?text=Vaso+Escultórico',
-        description: 'Pieza única hecha a mano con arcilla terracota',
+        image:'assets/images/products/toro_1.jpg',
+        description: 'Pieza única hecha a mano con cerámica',
         featured: true,
         inStock: true
     },
