@@ -18,7 +18,7 @@ const PRODUCTS = [
     {
         id: 1,
         name: 'Botijo "Toro"',
-        price: 72,
+        price: 195,
         category: 'ceramica',
         image:'assets/images/products/toro_1.jpg',
         description: 'Pieza única hecha a mano con cerámica',
