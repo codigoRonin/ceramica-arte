@@ -103,7 +103,7 @@
                                 <span class="icon-star"></span>
                                 <span class="icon-star"></span>
                             </div>
-                            <p class="mt-2 text-gray-600">"Experiencia excepcional"</p>
+                            <p class="mt-2 text-gray-600">"Pieza excepcional"</p>
                         </div>
                     </div>
                 </div>
@@ -139,52 +139,8 @@
                         Aprende cerámica y expresión artística con nuestras expertas
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                        <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Curso+Cerámica" alt="Introducción a la Cerámica" class="w-full h-48 object-cover" />
-                        <div class="p-6">
-                            <div class="flex items-center gap-4 mb-3">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
-                                    Principiante
-                                </span>
-                                <span class="flex items-center gap-1 text-gray-600">
-                                    <span class="icon-clock"></span>
-                                    8 semanas
-                                </span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Introducción a la Cerámica</h3>
-                            <p class="text-gray-600 mb-4">Aprende las bases del torno y modelado manual</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-primary">€238</span>
-                                <button class="reserve-course btn-primary text-white px-6 py-2 rounded-lg" data-course-id="1">
-                                    📅 Reservar plaza
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                        <img src="https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística" alt="Expresión Artística" class="w-full h-48 object-cover" />
-                        <div class="p-6">
-                            <div class="flex items-center gap-4 mb-3">
-                                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
-                                    Intermedio
-                                </span>
-                                <span class="flex items-center gap-1 text-gray-600">
-                                    <span class="icon-clock"></span>
-                                    6 semanas
-                                </span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Expresión Artística con Arcilla</h3>
-                            <p class="text-gray-600 mb-4">Explora tu creatividad a través de la cerámica</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-primary">€204</span>
-                                <button class="reserve-course btn-primary text-white px-6 py-2 rounded-lg" data-course-id="2">
-                                    📅 Reservar plaza
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="courses-container">
+                    <!-- Cursos se cargarán dinámicamente desde components/courses.js -->
                 </div>
                 <div class="text-center mt-12">
                     <button class="btn-secondary px-8 py-3 rounded-lg font-semibold" onclick="contactWhatsApp('info-cursos')">
@@ -203,54 +159,8 @@
                         Viajes y retiros creativos que transformarán tu relación con el arte
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                        <img src="https://placehold.co/600x400/8B4513/FFFFFF?text=Toscana+Retiro" alt="Retiro en Toscana" class="w-full h-48 object-cover" />
-                        <div class="p-6">
-                            <div class="flex items-center gap-4 mb-3">
-                                <span class="flex items-center gap-1 text-gray-600">
-                                    <span class="icon-calendar"></span>
-                                    7 días
-                                </span>
-                                <span class="flex items-center gap-1 text-gray-600">
-                                    <span class="icon-plane"></span>
-                                    Viaje
-                                </span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Retiro Creativo en Toscana</h3>
-                            <p class="text-gray-600 mb-4">Inmersión total en cerámica y arte en Italia</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-primary">€1020</span>
-                                <button class="reserve-course btn-primary text-white px-6 py-2 rounded-lg" data-course-id="3">
-                                    ✈️ Reservar plaza
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                        <img src="https://placehold.co/600x400/D2B48C/000000?text=Cerámica+Japonesa" alt="Cerámica Japonesa" class="w-full h-48 object-cover" />
-                        <div class="p-6">
-                            <div class="flex items-center gap-4 mb-3">
-                                <span class="flex items-center gap-1 text-gray-600">
-                                    <span class="icon-calendar"></span>
-                                    5 días
-                                </span>
-                                <span class="flex items-center gap-1 text-gray-600">
-                                    <span class="icon-plane"></span>
-                                    Viaje
-                                </span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Taller de Cerámica Japonesa</h3>
-                            <p class="text-gray-600 mb-4">Aprende técnicas tradicionales japonesas</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-2xl font-bold text-primary">€723</span>
-                                <button class="reserve-course btn-primary text-white px-6 py-2 rounded-lg" data-course-id="4">
-                                    ✈️ Reservar plaza
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="experiences-container">
+                    <!-- Experiencias se cargarán dinámicamente desde components/experiences.js -->
                 </div>
                 <div class="text-center mt-12">
                     <button class="btn-secondary px-8 py-3 rounded-lg font-semibold" onclick="contactWhatsApp('info-experiencias')">
@@ -269,58 +179,8 @@
                         Dos artistas apasionadas por compartir su conocimiento y creatividad
                     </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="text-center">
-                        <div class="relative inline-block mb-6">
-                            <img 
-                                src="assets/images/cana.png" 
-                                alt="María del Carmen Pérez" 
-                                class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg"
-                            />
-                            <div class="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md">
-                                <span class="icon-instagram text-gray-600"></span>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">María del Carmen Pérez</h3>
-                        <p class="text-gray-600 mb-4">Ceramista & Educadora</p>
-                        <p class="text-gray-700 leading-relaxed">
-                            Con más de 15 años de experiencia en cerámica artística, María del Carmen combina técnicas tradicionales con enfoques contemporáneos para crear piezas únicas que exploran la relación entre forma y función.
-                        </p>
-                        <div class="flex justify-center gap-4 mt-4">
-                            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                                <span class="icon-instagram text-xl"></span>
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                                <span class="icon-facebook text-xl"></span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="text-center">
-                        <div class="relative inline-block mb-6">
-                            <img 
-                                src="assets/images/cora.png" 
-                                alt="Cora González" 
-                                class="w-48 h-48 rounded-full object-cover mx-auto shadow-lg"
-                            />
-                            <div class="absolute -bottom-2 -right-2 bg-white rounded-full p-2 shadow-md">
-                                <span class="icon-instagram text-gray-600"></span>
-                            </div>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Cora González</h3>
-                        <p class="text-gray-600 mb-4">Artista Visual & Diseñadora</p>
-                        <p class="text-gray-700 leading-relaxed">
-                            Cora es una artista multidisciplinaria especializada en pintura contemporánea y expresión artística. Su trabajo explora temas de identidad, memoria y conexión humana a través de colores vibrantes y texturas expresivas.
-                        </p>
-                        <div class="flex justify-center gap-4 mt-4">
-                            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                                <span class="icon-instagram text-xl"></span>
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
-                                <span class="icon-facebook text-xl"></span>
-                            </a>
-                        </div>
-                    </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12" id="authors-container">
+                    <!-- Autoras se cargarán dinámicamente desde components/authors.js -->
                 </div>
             </div>
         </section>
@@ -472,12 +332,15 @@
     </div>
 
     <!-- Scripts -->
-    <script src="./data/products.js"></script>
+    <script src="./data/data.js"></script>
     <script src="./assets/js/utils.js"></script>
     <script src="./assets/js/navigation.js"></script>
     <script src="./assets/js/cart.js"></script>
     <script src="./assets/js/course-booking.js"></script>
     <script src="./components/products.js"></script>
+    <script src="./components/courses.js"></script>
+    <script src="./components/experiences.js"></script>
+    <script src="./components/authors.js"></script>
     <script src="./assets/js/dynamic-content.js"></script>
     
     <script>

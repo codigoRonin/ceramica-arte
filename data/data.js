@@ -1,10 +1,11 @@
-// data/products.js - Base de datos de productos centralizada
+// data/data.js - Base de datos centralizada del sitio
+// Contiene: SITE_CONFIG, PRODUCTS, COURSES, EXPERIENCES, AUTHORS
 
 const SITE_CONFIG = {
-    title: 'Cerámica & Arte',
-    description: 'Piezas únicas de cerámica y arte contemporáneo',
-    whatsappNumber: '34628742680', // Tu número de WhatsApp
-    email: 'info@canaceramica.com',
+    title: 'As d\'o Studio',
+    description: 'Piezas únicas de cerámica, arte contemporáneo, cursos y experiencias inolvidables',
+    whatsappNumber: '34628742680', 
+    email: 'info@asdostudio.com',
     phone: '+34 628 74 26 80',
     address: 'Zaragoza, España',
     colors: {
@@ -109,9 +110,9 @@ const AUTHORS = [
     {
         id: 1,
         name: 'María del Carmen Pérez',
-        role: 'Ceramista & Artista',
-        bio: 'Con más de 15 años de experiencia en cerámica artística, María combina técnicas tradicionales con enfoques contemporáneos para crear piezas únicas que exploran la relación entre forma y función.',
-        image: 'https://placehold.co/400x500/8B4513/FFFFFF?text=María+del+Carmen+Pérez',
+        role: 'Ceramista & Educadora',
+        bio: 'Con más de 15 años de experiencia en cerámica artística, María del Carmen combina técnicas tradicionales con enfoques contemporáneos para crear piezas únicas que exploran la relación entre forma y función.',
+        image: 'assets/images/cana.png',
         social: {
             instagram: '@maria.ceramica',
             facebook: 'mariagonzalezceramica'
@@ -120,9 +121,9 @@ const AUTHORS = [
     {
         id: 2,
         name: 'Cora González',
-        role: 'Artista Visual & Educadora',
+        role: 'Artista Visual & Diseñadora',
         bio: 'Cora es una artista multidisciplinaria especializada en pintura contemporánea y expresión artística. Su trabajo explora temas de identidad, memoria y conexión humana a través de colores vibrantes y texturas expresivas.',
-        image: 'https://placehold.co/400x500/D2B48C/000000?text=Cora+González',
+        image: 'assets/images/cora.png',
         social: {
             instagram: '@cora.art',
             facebook: 'coragonzalezart'
