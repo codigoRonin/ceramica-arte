@@ -45,16 +45,6 @@ const PRODUCTS = [
         description: 'Cerámica gres con óxidos naturales',
         featured: true,
         inStock: true
-    },
-    {
-        id: 4,
-        name: 'Set de Tazas Artísticas',
-        price: 102,
-        category: 'ceramica',
-        image: 'assets/images/products/2.jpg',
-        description: 'Set de 4 tazas únicas con esmaltes reactivos',
-        featured: false,
-        inStock: true
     }
 ];
 
@@ -70,16 +60,6 @@ const COURSES = [
         featured: true
     },
     {
-        id: 2,
-        title: 'Expresión Artística con Arcilla',
-        duration: '6 semanas',
-        level: 'Intermedio',
-        price: 204,
-        image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',
-        description: 'Explora tu creatividad a través de la cerámica',
-        featured: true
-    },
-        {
         id: 2,
         title: 'Expresión Artística con Arcilla',
         duration: '6 semanas',
