@@ -22,7 +22,7 @@ const PRODUCTS = [
         price: 195,
         category: 'ceramica',
         image:'assets/images/products/1.png',
-        description: 'Pieza única hecha a mano con cerámica',
+        description: 'Pieza única hecha a mano',
         featured: true,
         inStock: true
     },
@@ -39,7 +39,7 @@ const PRODUCTS = [
     {
         id: 3,
         name: 'Escultura "Raíces"',
-        price: 238,
+        price: 195,
         category: 'arte',
         image: 'assets/images/products/3.png',
         description: 'Cerámica gres con óxidos naturales',
@@ -61,11 +61,12 @@ const COURSES = [
     },
     {
         id: 2,
-        title: 'Expresión Artística con Arcilla',
-        duration: '6 semanas',
+        title: 'Expresión Artística',
+        duration: '2 fines de semanas',
         level: 'Intermedio',
-        price: 204,
-        image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',
+        price: 75,
+       // image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',          image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',
+        image: 'images/courses/2.png', 
         description: 'Explora tu creatividad a través de la cerámica',
         featured: true
     }
@@ -102,7 +103,7 @@ const AUTHORS = [
         name: 'María del Carmen Pérez',
         role: 'Ceramista & Educadora',
         bio: 'Con más de 15 años de experiencia en cerámica artística, María del Carmen combina técnicas tradicionales con enfoques contemporáneos para crear piezas únicas que exploran la relación entre forma y función.',
-        image: 'assets/images/cana.png',
+        image: 'assets/images/authors/cana.png',
         social: {
             instagram: '@maria.ceramica',
             facebook: 'mariagonzalezceramica'
@@ -113,7 +114,7 @@ const AUTHORS = [
         name: 'Cora González',
         role: 'Artista Visual & Diseñadora',
         bio: 'Cora es una artista multidisciplinaria especializada en pintura contemporánea y expresión artística. Su trabajo explora temas de identidad, memoria y conexión humana a través de colores vibrantes y texturas expresivas.',
-        image: 'assets/images/cora.png',
+        image: 'assets/images/authors/cora.png',
         social: {
             instagram: '@cora.art',
             facebook: 'coragonzalezart'
