@@ -78,7 +78,7 @@ const COURSES = [
         image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',
         description: 'Explora tu creatividad a través de la cerámica',
         featured: true
-    }
+    },
         {
         id: 2,
         title: 'Expresión Artística con Arcilla',
