@@ -20,7 +20,7 @@ const PRODUCTS = [
         name: 'Botijo "Toro"',
         price: 195,
         category: 'ceramica',
-        image:'assets/images/products/toro_1.png',
+        image:'assets/images/products/1.png',
         description: 'Pieza única hecha a mano con cerámica',
         featured: true,
         inStock: true
@@ -30,7 +30,7 @@ const PRODUCTS = [
         name: 'Cuadro Abstracto "Ecos"',
         price: 295,
         category: 'arte',
-        image: 'assets/images/products/cuadro_1.jpg',
+        image: 'assets/images/products/2.jpg',
         description: 'Acrílico sobre lienzo, 80x100cm',
         featured: true,
         inStock: true
@@ -40,7 +40,7 @@ const PRODUCTS = [
         name: 'Escultura "Raíces"',
         price: 238,
         category: 'arte',
-        image: 'https://placehold.co/600x600/8B4513/FFFFFF?text=Escultura+Raíces',
+        image: 'assets/images/products/3.jpg',
         description: 'Cerámica gres con óxidos naturales',
         featured: true,
         inStock: true
@@ -50,7 +50,7 @@ const PRODUCTS = [
         name: 'Set de Tazas Artísticas',
         price: 102,
         category: 'ceramica',
-        image: 'https://placehold.co/600x600/D2B48C/000000?text=Set+Tazas',
+        image: 'assets/images/products/2.jpg',
         description: 'Set de 4 tazas únicas con esmaltes reactivos',
         featured: false,
         inStock: true
