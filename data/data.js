@@ -31,7 +31,7 @@ const PRODUCTS = [
         name: 'Cuadro Abstracto "Ecos"',
         price: 295,
         category: 'arte',
-        image: 'assets/images/products/2.jpg',
+        image: 'assets/images/products/2.png',
         description: 'Acrílico sobre lienzo, 80x100cm',
         featured: true,
         inStock: true
@@ -41,7 +41,7 @@ const PRODUCTS = [
         name: 'Escultura "Raíces"',
         price: 238,
         category: 'arte',
-        image: 'assets/images/products/3.jpg',
+        image: 'assets/images/products/3.png',
         description: 'Cerámica gres con óxidos naturales',
         featured: true,
         inStock: true
@@ -70,6 +70,16 @@ const COURSES = [
         featured: true
     },
     {
+        id: 2,
+        title: 'Expresión Artística con Arcilla',
+        duration: '6 semanas',
+        level: 'Intermedio',
+        price: 204,
+        image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',
+        description: 'Explora tu creatividad a través de la cerámica',
+        featured: true
+    }
+        {
         id: 2,
         title: 'Expresión Artística con Arcilla',
         duration: '6 semanas',
