@@ -66,7 +66,7 @@ const COURSES = [
         level: 'Intermedio',
         price: 75,
        // image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',          image: 'https://placehold.co/600x400/D2B48C/000000?text=Expresión+Artística',
-        image: 'images/courses/2.png', 
+        image: 'assets/images/courses/2.png', 
         description: 'Explora tu creatividad a través de la cerámica',
         featured: true
     }
