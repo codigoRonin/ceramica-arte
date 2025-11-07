@@ -1,13 +1,16 @@
 class GalleryComponent {
     constructor() {
         this.currentImageIndex = 0;
-        this.gallery = window.GALLERY || [];
+        this.gallery = [];
         this.init();
     }
 
     init() {
-        this.renderGallery();
-        this.createLightbox();
+        document.addEventListener('DOMContentLoaded', () => {
+            this.gallery = GALLERY;
+            this.renderGallery();
+            this.createLightbox();
+        });
     }
 
     renderGallery() {
