@@ -164,11 +164,6 @@ class GalleryComponent {
     }
 }
 
-// Inicializar cuando el DOM esté listo
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        window.galleryComponent = new GalleryComponent();
-    });
-} else {
-    window.galleryComponent = new GalleryComponent();
-}
+// Inicializar componente
+const galleryComponent = new GalleryComponent();
+window.galleryComponent = galleryComponent;
