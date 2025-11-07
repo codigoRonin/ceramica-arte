@@ -121,9 +121,69 @@ const AUTHORS = [
     }
 ];
 
+const GALLERY = [
+    {
+        id: 1,
+        title: 'Botijo Toro',
+        image: 'assets/images/gallery/1.png',
+        category: 'ceramica',
+        description: 'Pieza única de cerámica artesanal'
+    },
+    {
+        id: 2,
+        title: 'Cuadro Abstracto',
+        image: 'assets/images/gallery/2.png',
+        category: 'arte',
+        description: 'Obra de arte contemporáneo'
+    },
+    {
+        id: 3,
+        title: 'Escultura Cerámica',
+        image: 'assets/images/gallery/3.png',
+        category: 'ceramica',
+        description: 'Escultura en gres con óxidos naturales'
+    },
+    {
+        id: 4,
+        title: 'Taller de Cerámica',
+        image: 'assets/images/gallery/4.png',
+        category: 'taller',
+        description: 'Momento del taller de cerámica'
+    },
+    {
+        id: 5,
+        title: 'Portada Atelier',
+        image: 'assets/images/gallery/5.png',
+        category: 'atelier',
+        description: 'Nuestro espacio de trabajo'
+    },
+    {
+        id: 6,
+        title: 'Cerámica en Proceso',
+        image: 'assets/images/gallery/6.png',
+        category: 'ceramica',
+        description: 'Detalle de una pieza en creación'
+    },
+    {   
+        id: 7,
+        title: 'Taza Artesanal',
+        image: 'assets/images/gallery/7.png',
+        category: 'ceramica',
+        description: 'Taza hecha a mano con esmaltes naturales'
+    },
+    {
+        id: 8,
+        title: 'Paisaje Pintado',
+        image: 'assets/images/gallery/8.png',
+        category: 'arte',
+        description: 'Pintura al óleo de paisaje natural'
+    }
+];
+
 // Exportar para uso global
 window.SITE_CONFIG = SITE_CONFIG;
 window.PRODUCTS = PRODUCTS;
 window.COURSES = COURSES;
 window.EXPERIENCES = EXPERIENCES;
 window.AUTHORS = AUTHORS;
+window.GALLERY = GALLERY;
